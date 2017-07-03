@@ -1,0 +1,29 @@
+@{
+    ViewBag.Title = "Bootstrap Tabs Example";
+}
+<ul id="myTab" class="nav nav-tabs">
+  <li class="active"><a href="#Tab1" data-toggle="tab">About the Book</a></li>
+  <li><a href="#Tab2" data-toggle="tab">More Info</a></li>
+</ul>
+
+<div id="myTabContent" class="tab-content">
+  <div class="tab-pane active" id="Tab1">
+    <span style="font-style: italic; color: Navy;">Get the book "<a href="http://www.amazon.com/gp/product/0615631479/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0615631479&linkCode=as2&tag=luppeconsu-20">Delivering Mobile-Friendly WebSites With MVC4</a>"!</span><br />
+    <br />
+    <p>In this book, you will learn how to build on your existing MVC skills and leverage those new features to create websites using an 
+    Adaptive View Design pattern so that they will adapt to the type of device that the user is browsing with, 
+    whether that device is a desktop, tablet, or mobile phone, and deliver appropriately formatted 
+    web pages that look great on each device!</p>
+
+  </div>
+
+  <div class="tab-pane" id="Tab2">
+    <h2 style="color: Red;">Breaking Changes!</h2>
+    <p>I've released a Third Edition of the book which is available on <a href="http://www.amazon.com/gp/product/B0086W84Q6/ref=as_li_ss_tl?ie=UTF8&tag=luppeconsu-20&linkCode=as2&camp=1789&creative=390957&creativeASIN=B0086W84Q6" target="_blank"  style="font-size: 1.2em; font-weight: bold;">Amazon</a>.  
+    If you have the Second Edition, the changes are very minimal and not worth worrying about.
+    If you have the First Edition, Chapter 4 has a lot of changes, so I've decided to <a href="http://www.luppes.com/MVC4Book/Updates/" style="font-size: 1.2em; font-weight: bold;">release that as a PDF</a> for my readers in 8.5x11 format.
+    That way, if you have an existing book, you can easily print it out and update your copy. 
+    If you've bought a first or second edition book and would like to get an updated eBook version, contact me and I'll do my best to make that happen.</p>
+  </div>
+
+</div>

@@ -1,0 +1,26 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>_Layout</title>
+    @RenderSection("scripts")
+</head>
+<body>
+    <div>
+        @RenderBody()
+    </div>
+    <div style="width: auto; background-color: #728ea7;">
+        @if (Request.IsAuthenticated)
+        {
+            <strong>@Html.Encode(User.Identity.Name)</strong>
+            @Html.ActionLink("Sign Out", "Login", "MessageBoard")
+        }
+     
+    </div> 
+</body>
+</html>

@@ -1,0 +1,51 @@
+﻿@model MVCPractise3.Models.User
+@{
+    ViewBag.Title = "留言板";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@{
+    ViewBag.Title = "MessageBoard";
+}
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Index</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-responsive.min.css" rel="stylesheet" />
+    <style type="text/css">
+        body {
+            padding-top: 100px;
+            padding-bottom: 50px;
+        }
+    </style>
+</head>
+@section scripts
+{
+    <script type="text/javascript" src="~/Scripts/jquery-1.7.1.js"></script>
+    <script type="text/javascript" src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
+
+}
+
+<h2>Index</h2>
+@Ajax.BeginForm("ShowDetails", "MessageBoard",
+     new AjaxOptions
+     {
+         HttpMethod = "POST",
+         UpdateTargetId = "div1",
+         InsertionMode = InsertionMode.Replace,
+         LoadingElementId = "waitimage"
+     })
+<h1>請留言</h1>
+<h2>
+    姓名 : @Html.TextBox("Name")<br />
+    內容 : @Html.TextArea("Content")<br />
+    <input type="submit" value="送出留言" />
+    <input type="reset" value="Clear" />
+</h2>
+@{Html.EndForm();}
+<br />
+<img id="waitimage" src="~/Images/loading42.gif" style="display:none" />
+<br />
+<div id="div1">
+</div>
